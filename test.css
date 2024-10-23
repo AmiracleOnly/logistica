@@ -1,3 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    padding: 0 0;
+    margin: 0 0;
+}
+
+p{
+    padding: 0 0;
+    margin: 0 0;
+}
+
+a {
+    text-decoration: none;
+}
 body {
     background-color: (var(--color-dark-blue));
     font-family: Arial, sans-serif;
@@ -8,6 +26,7 @@ body {
     align-items: center;
     /* height: 100vh; */
     margin: 0;
+    text-decoration: none;
 
     --framer-aspect-ratio-supported: auto;
 
@@ -198,29 +217,14 @@ body {
     width: 100%
 }
 
-/* .main__section{
-    display: block;
-} */
 
 
 
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-h2{
-    padding: 0 0;
-    margin: 0 0;
-}
 
-p{
-    padding: 0 0;
-    margin: 0 0;
-}
+
 /*MAIN CONTAINER SECTION О КОМПАНИИ*/
 .main__container{
     min-height: 100vh;
@@ -469,6 +473,10 @@ p{
     z-index: 1;
 }
 
+
+
+
+
 .nav__link__about{
     outline: none;
     display: flex;
@@ -640,7 +648,7 @@ p{
     font-style: normal;
     font-style: bold;
     font-weight: 500;
-    font-weight: 700;
+    /* font-weight: 700; */
     letter-spacing: 0em;
     line-height: 120%;
     /* paragraph-space: 20px; */
@@ -918,6 +926,20 @@ p{
     width: 100%;
     z-index: 2;
 }
+/*Section BTN MAIN*/
+.main__block__btn{
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(4, minmax(1px, 1fr));
+    grid-template-rows: repeat(1, min-content);
+    justify-content: center;
+}
+
+.framer__block__btn{
+    grid-column: auto / span 2;
+}
+
+
 
 .framer__img__content{
     border-width: 1px;
@@ -1684,7 +1706,7 @@ p{
     position: relative;
     user-select: none;
     /* white-space: pre-wrap; */
-    width: 1px;
+    /* width: 1px; */
     word-break: break-word;
     word-wrap: break-word;
 
@@ -1711,6 +1733,12 @@ p{
 .framer-16-faq{
     text-align: left;
     color: var(--color-white-background);
+    text-transform: none;
+}
+
+.framer-14-faq{
+    text-align: left;
+    color: var(--color-white-background);
 }
 
 .framer__line {
@@ -1723,18 +1751,100 @@ p{
     width: 12px;
 }
 
-.__1__{
-    background-color: var(--token-06543828-86da-4aa2-9233-5875c2876d48, rgb(242, 242, 242));
-    transform: none;
-    transform-origin: 50% 50% 0px;
+section .title{
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+    margin: 8rem 9rem 3rem;
 }
 
-.__2__{
-    background-color: var(--token-06543828-86da-4aa2-9233-5875c2876d48, rgb(242, 242, 242));
-    transform: rotate(-90deg);
-    will-change: auto;
-    transform-origin: 50% 50% 0px;
+.accordion{
+    margin: 3rem auto;
+    width: 80rem;
+    padding: 0rem 2.5rem;
 }
+
+.accordion li {
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.accordion li label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0d1117;
+    cursor: pointer;
+}
+
+.accordion label + input [type=checkbox] {
+    opacity: 0;
+display: none;
+}
+
+.accordion .content {
+    /* opacity: 1; */
+    padding: 0rem 1rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+}
+
+.accordion label + input[type=checkbox]:checked + .content {
+    max-height: 100rem;
+}
+
+
+
+
+/* Общие стили FAQ */
+.faq {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .faq__item {
+    margin-bottom: 16px;
+  }
+  
+  .faq__checkbox {
+    display: none; /* Скрываем чекбокс */
+  }
+  
+  /* Стили для вопроса */
+  .faq__question {
+    display: block;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #122c5f;
+    position: relative;
+  }
+  
+  /* Изначально скрываем ответ */
+  .faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    font-weight: normal;
+    color: #333;
+    padding-top: 8px;
+  }
+  
+  /* Показываем ответ, если чекбокс выбран */
+  .faq__checkbox:checked + .faq__question .faq__answer {
+    max-height: 100px; /* Устанавливаем максимальную высоту для контента */
+  }
 
 .framer__p__faq{
     text-align: left;
@@ -1890,9 +2000,6 @@ width: 100%;
     white-space: normal;
 }
 
-.footer__link{
-      width: 81px;
-}
 
 .footer__slogan{
     --extracted-r6o4lv: var(--token-21fcad28-8de6-467c-9fb7-960a0f9049e6, rgba(18, 44, 95, 0.7));
@@ -1914,12 +2021,12 @@ width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0px;
-    height: 11px;
+    /* height: 11px; */
     justify-content: center;
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 11px;
+    /* width: 11px; */
 }
 
 .logo__framer__px{
@@ -2065,9 +2172,9 @@ width: 100%;
 /*LEFT BLOCK && RIGHT BLOCK*/
 
 .block__left{
-    border-width: 1px;
+    /* border-width: 1px;
     border-color: var(--color-left-block);
-    border-style: solid;
+    border-style: solid; */
     place-self: start;
     border-radius: 8px;
     flex: 0 0 auto;
@@ -2127,6 +2234,56 @@ width: 100%;
     padding: 32px 24px 48px;
     position: relative;
     /* will-change: tran; */
+}
+
+.contact__btn{
+    cursor: pointer;
+    background-color: var(--color-white-background);
+    gap: 40px; 
+    padding: 28px 24px;
+}
+
+.framer__contact{
+    place-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 8px;
+    height: min-content;
+    max-width: 224px;
+    overflow: hidden;
+    padding: 0px;
+    pointer-events: none;
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+
+.framer__contact__title{
+    opacity: 1;
+    flex-flow: row;
+}
+
+.email {
+    backdrop-filter: blur(25px);
+    background-color: var(--color-dark-blue);
+    will-change: auto;
+}
+
+.whatsapp{
+    backdrop-filter: blur(25px);
+    background-color: var(--color-white-blue);
+    will-change: auto;
+
+}
+
+.gis{
+    backdrop-filter: blur(25px);
+    background-color: var(--color-orange-button);
+    /* opacity: 0.85; */
+    will-change: opacity;
+
 }
 
 .form__subtitle {
