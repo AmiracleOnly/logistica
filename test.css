@@ -1645,7 +1645,7 @@ body {
     height: min-content;
     justify-content: flex-start;
     overflow: hidden;
-    padding: 20px 24px;
+    padding: 0;
     position: relative;
     /* width: 475px; */
     will-change: var(--framer-will-change-override, transform);
@@ -1657,7 +1657,7 @@ body {
     gap: 16px;
     justify-content: center;
     width: 100%;
-    background-color: var(--color-main-background);
+    background-color: var(--color-btn-we-bg);
     transform: none;
     transform-origin: 50% 50% 0px;
 
@@ -1811,10 +1811,10 @@ display: none;
     max-width: 600px;
     margin: 0 auto;
   }
-  
+/*   
   .faq__item {
     margin-bottom: 16px;
-  }
+  } */
   
   .faq__checkbox {
     display: none; /* Скрываем чекбокс */
@@ -1824,7 +1824,7 @@ display: none;
   .faq__question {
     display: block;
     cursor: pointer;
-    padding: 16px;
+    padding: 20px 24px;
     border-radius: 8px;
     font-weight: bold;
     color: #122c5f;
@@ -1849,6 +1849,7 @@ display: none;
 .framer__p__faq{
     text-align: left;
     color: var(--extracted-r6o4lv, var(--token-6d921eb1-6bcc-4cfa-ba88-ac9726c24b04, rgba(242, 242, 242, 0.7)));
+    text-transform: none;
 }
 
 /*FOOTER*/ 
@@ -2188,7 +2189,7 @@ width: 100%;
 }
 
 .block__left__img{
-    /* position: absolute; */
+    position: absolute;
     border-radius: inherit;
     inset: 0px;
 }
@@ -2281,7 +2282,7 @@ width: 100%;
 .gis{
     backdrop-filter: blur(25px);
     background-color: var(--color-orange-button);
-    /* opacity: 0.85; */
+    opacity: 1;
     will-change: opacity;
 
 }
