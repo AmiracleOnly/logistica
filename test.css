@@ -74,7 +74,7 @@ body {
     line-height: 120%;
     paragraph-spacing: 20px;
     text-align: left;
-    color: var(--color-dark-blue);
+    /* color: var(--color-dark-blue); */
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -159,7 +159,7 @@ body {
     flex: 1 0 0px;
     flex-flow: column;
     gap: 0px;
-    height: min-content;
+    height: 100%;
     max-width: 1928px;
     overflow: hidden;
     padding: 0px 4px;
@@ -200,6 +200,11 @@ body {
     width: 100%
 }
 
+.main__section{
+    height: 100vh;
+    min-height: 720px;
+}
+
 /*MAIN CONTAINER SECTION О КОМПАНИИ*/
 .main__container{
     min-height: 100vh;
@@ -217,12 +222,31 @@ body {
     background-color: var(--token-06543828-86da-4aa2-9233-5875c2876d48, #f2f2f2);
     border-radius: 8px;
     display: flex;
-    flex: 0 0 auto;
+    flex: 1 0 0px;
     flex-flow: column;
     gap: 0px;
     height: min-content;
     overflow: hidden;
     padding: 0px;
+    position: relative;
+    width: 100%;
+    will-change: var(--framer-will-change-override, transform);
+}
+
+.hero__content__about{
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--color-white-background);
+    border-radius: 8px;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 0;
     position: relative;
     width: 100%;
     will-change: var(--framer-will-change-override, transform);
@@ -396,9 +420,6 @@ body {
 }
 
 .nav__about{
-    transform: none;
-    transform-origin: 50% 50% 0px;
-
     align-self: start;
     flex: none;
     height: auto;
@@ -408,9 +429,6 @@ body {
 }
 
 .nav__link{
-    transform: none;
-    transform-origin: 50% 50% 0px;
-
     align-content: center;
     align-items: center;
     cursor: pointer;
@@ -425,6 +443,10 @@ body {
     position: relative;
     text-decoration: none;
     width: min-content;
+}
+
+.nav__link:hover{
+    opacity: 0.6
 }
 
 .cub{
@@ -475,7 +497,7 @@ body {
     align-content: flex-start;
     align-items: flex-start;
     display: flex;
-    flex: none;
+    flex: 1 0 0px;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 16px;
@@ -486,6 +508,25 @@ body {
     position: relative;
     width: 100%;
 }
+
+.main__content__about{
+    flex: none;
+}
+
+
+/* .main{
+    place-content: flex-start flex-end;
+    align-items: flex-start;
+    display: flex;
+    flex: 1 0 0px;
+    flex-flow: column;
+    gap: 16px;
+    height: 1px;
+    overflow: hidden;
+    padding: 40px 0px;
+    position: relative;
+    width: 100%;
+} */
 
 .main__framer{
     align-content: center;
@@ -761,35 +802,29 @@ body {
     width: auto;
 }
 
-.block__right__btn__link{
+
+  .block__right__btn__link {
     border-width: 1px;
-    border-color: var(--color-dark-blue rgb(18, 44, 95));
+    border-color: var(--color-dark-blue, rgb(18, 44, 95));
     border-style: solid;
     backdrop-filter: blur(10px);
     background-color: var(--color-dark-blue, rgb(18, 44, 95));
+    color:  var(--color-white-background);
     border-radius: 1000px;
     opacity: 1;
-
-    align-content: center;
-    align-items: center;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 0px;
-    height: min-content;
+    align-items: center;
     justify-content: center;
-    overflow: hidden;
     padding: 12px 18px;
-    position: relative;
     text-decoration: none;
-    width: min-content;
-    will-change: var(--framer-will-change-override, transform);
+    transition: background-color 0.4s, color 0.4s ;
 }
+
 
 .btn__right{
     opacity: 1;
-
+   
     align-content: center;
     align-items: center;
     display: flex;
@@ -813,8 +848,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     flex-shrink: 0;
-    --extracted-r6o4lv: var(--color-white-background rgb(242, 242, 242));
-    --framer-link-text-color: rgb(0, 153, 255);
+  
     --framer-link-text-decoration: underline;
     opacity: 1;
     transform: perspective(500px);
@@ -828,10 +862,19 @@ body {
     width: auto;
 }
 
-.btn__right__text{
-    text-align: center;
-    color:  var(--color-white-background);
 
+.block__right__btn__link:hover {
+    background-color: #fff; /* Фон становится белым */
+    color: var(--color-dark-blue, rgb(18, 44, 95)); /* Цвет текста при наведении */
+}
+
+.block__right__btn__link:hover .btn__right__text {
+    color: var(--color-dark-blue, rgb(18, 44, 95)) ; /* Цвет текста меняется на синий */
+}
+
+/* Убираем эффект наведения текста, если он влияет */
+.btn__right__text:hover {
+    color: var(--color-dark-blue, rgb(18, 44, 95)); /* Цвет текста на синий */
 }
 
 .btn__right__transform__white{
@@ -854,7 +897,7 @@ body {
 
 .btn__right__text{
     text-align: center;
-    color: var(--extracted-r6o4lv, var(--color-white-background rgb(242, 242, 242)));
+    color: var(--color-white-background);
     font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -867,6 +910,13 @@ body {
     text-decoration: none;
     --framer-text-transform: uppercase;
 }
+
+/* .btn__right__text:hover{
+    color: var(--color-dark-blue);
+} */
+
+
+
 
 /*IMG CONTENT*/
 .main__img__container{
@@ -1340,9 +1390,6 @@ body {
 }
 
 
-
-
-
 .hightlight__container__text{
     border-bottom-width: 1px;
     border-color: var(--color-btn-we, rgba(242, 242, 242, .1));
@@ -1386,7 +1433,16 @@ body {
     padding: 12px 18px;
     will-change: var(--framer-will-change-override, transform);
     background-color: var(--color-white-background);
+    transition: background-color 0.4s, color 0.4s ;
 }
+
+.hightlight__btn__text:hover {
+    background-color: var(--color-dark-blue); /* Фон становится белым */
+    color: var(--color-white-background); /* Цвет текста при наведении */
+}
+
+
+
 
 .hightlight__btn__{
     flex: none;
@@ -1406,6 +1462,15 @@ body {
     color: var(--color-dark-blue);
     opacity: 1;
     transform: perspective(500px);
+}
+
+.hightlight__btn__text:hover .element__text__btn {
+    color: var(--color-white-background) ; /* Цвет текста меняется на синий */
+}
+
+/* Убираем эффект наведения текста, если он влияет */
+.element__text__btn:hover {
+    color: var(--color-white-background); /* Цвет текста на синий */
 }
 
 /*BLOCK 3*/
@@ -2034,7 +2099,15 @@ width: 100%;
     position: relative;
     text-decoration: none;
     /* width: min-content;  */
+    will-change: opacity ;
+    transition: opacity 1s easy;
 }
+
+.footer__link__text:hover{
+    opacity: 0.6;
+}
+
+
 
 
 
@@ -2222,21 +2295,36 @@ width: 100%;
     backdrop-filter: blur(25px);
     background-color: var(--color-dark-blue);
     will-change: auto;
+    transition: opacity 0.3s ease;
+}
+
+.email:hover{
+    opacity: 0.7;
 }
 
 .whatsapp{
     backdrop-filter: blur(25px);
     background-color: var(--color-white-blue);
     will-change: auto;
-
+    transition: opacity 0.3s ease;
 }
+
+
+.whatsapp:hover{
+    opacity: 0.7;
+}
+
 
 .gis{
     backdrop-filter: blur(25px);
     background-color: var(--color-orange-button);
     opacity: 1;
     will-change: opacity;
+    transition: opacity 0.3s ease;
+}
 
+.gis:hover{
+    opacity: 0.8;
 }
 
 .form__subtitle {
@@ -2690,6 +2778,10 @@ width: 100%;
     opacity: 1;
 }
 
+.order__1{
+    order: 1;
+}
+
 .services__block__img{
     place-content: flex-end center;
     align-items: flex-end;
@@ -2726,6 +2818,16 @@ width: 100%;
 
 .services__btn{
     width: auto;
+}
+
+.white__btn{
+    backdrop-filter: blur(0px);
+    flex-direction: row;
+    gap: 4px;
+    /* padding: 6px 4px; */
+    background: var(--color-orange-button);
+    opacity: 0.9;
+    /* color: var(--color-dark-blue); */
 }
 
 .services__text__slogan{
