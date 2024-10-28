@@ -518,11 +518,20 @@ body {
 
 
 .main{
-    background-size: cover; /* Масштабирование фона на всю секцию */
-    background-position: center; /* Центрирование изображения */
-    background-repeat: no-repeat; /* Убирает дублирование */
-    background-image: url(/main/assets/images/mainTruck.jpg);
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: cover;
+    /* background-image: url(/main/assets/images/mainTruck.jpg); */
 } 
+
+.content__img{
+    position: absolute;
+    border-radius: inherit;
+    inset: 0px;
+}
 
 .main__framer{
     align-content: center;
@@ -591,12 +600,22 @@ body {
     will-change: var(--framer-will-change-override, transform);
 }
 
+.main__white__btn{
+    border-color: var(--color-white-background);
+    color: var(--color-white-background);
+
+}
+
 .cub__main{
     background-color: var(--color-dark-blue);
     border-radius: 50%;
     transform: none;
     opacity: 1;
     animation: blink 1s infinite;
+}
+
+.cub__white{
+    background-color: var(--color-white-background)
 }
 
 .cub__white{
@@ -657,6 +676,10 @@ body {
     text-align: left;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.main__white__text{
+    color: var(--color-white-background);
 }
 
 /*main block content*/
@@ -981,8 +1004,10 @@ body {
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    object-position: center center;
+    object-position: center ;
+    /* object-fit: fill; */
     object-fit: cover;
+
 }
 
 
