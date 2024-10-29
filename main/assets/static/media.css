@@ -1,0 +1,173 @@
+@media (min-width: 768px) and (max-width: 1159px) {
+
+    .main__block__btn {
+      grid-template-columns: repeat(2,minmax(1px,1fr));
+    }
+
+    .partners {
+        grid-template-columns: repeat(4,minmax(1px,1fr));
+    }
+  
+      .partner0 {
+          order: 0;
+      }
+  
+      .partner1 {
+          order: 1;
+      }
+  
+      .partner2 {
+          order: 2;
+      }
+  
+      .partner3 {
+          order: 3;
+      }
+  
+      .partner4 {
+          order: 4;
+      }
+  
+      .partner5 {
+          order: 5;
+      }
+  
+      .partner6 {
+          order: 6;
+      }
+  
+      .partner7 {
+          order: 7;
+      }
+  
+      .partner8 {
+          order: 8;
+          display: flex;
+      }
+  
+      .partner9 {
+          order: 9;
+      }
+  
+      .partner10 {
+          order: 10;
+      }
+  
+      .partner11 {
+          order: 11;
+          display: flex;
+      }
+}
+
+@media (max-width: 767px) {
+
+    .main__section {
+        height: 130vh;
+    }
+
+    .main__content {
+        flex: none;
+        height: min-content;
+        padding: 187px 0 40px;
+    }
+
+    .main__none__btn {
+        align-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 16px;
+        justify-content: flex-start;
+    }
+
+
+
+    .main__block__btn {
+        display: flex;
+    }
+
+    .gis {
+        grid-column: auto / span 1;
+    }
+
+    .partners {
+        grid-template-columns: repeat(2,minmax(1px,1fr));
+    }
+
+    .partner0 {
+        order: 0;
+    }
+
+    .partner1 {
+        order: 1;
+    }
+
+    .partner2 {
+        order: 2;
+    }
+
+    .partner3 {
+        order: 3;
+    }
+
+    .partner4 {
+        order: 4;
+    }
+
+    .partner5 {
+        order: 5;
+    }
+
+    .partner6 {
+        order: 6;
+    }
+
+    .partner7 {
+        order: 7;
+    }
+
+    .partner9 {
+        order: 9;
+    }
+
+    .partner10 {
+        order: 10;
+    }
+
+    .section__hightlight {
+        flex-direction: column;
+        padding: 160px 0 0;
+    }
+
+    .global__container {
+        flex: none;
+        width: 100%;
+    }
+
+    .hightlight__text__container {
+        gap: 64px;
+    }
+
+    .begin__text {
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: flex-start;
+    }
+
+    .begin__main__text {
+        flex: none;
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .we__text__slogan {
+        font-size: 28px;
+    }
+
+    .framer-text__168 {
+        font-size: 80px;
+    }
+}
