@@ -1157,7 +1157,6 @@ body {
 }
 
 .framer__icon{
-
     aspect-ratio: 1 / 1;
     flex: none;
     height: var(--framer-aspect-ratio-supported, 24px);
@@ -1176,9 +1175,6 @@ body {
     width: 100%;
 }
 
-.block__icon{
-    position: absolute;
-}
 
 .framer__content__text__{
     opacity: 1;
@@ -1313,6 +1309,8 @@ body {
 	word-break: break-word;
 	word-wrap: break-word;
 }
+
+
 
 .begin__btn__text{
     will-change: none;
@@ -2326,6 +2324,10 @@ width: 100%;
     overflow-wrap: break-word;
 }
 
+.form__text__calculate{
+    max-width: none;
+}
+
 .form__action__subtitle {
     text-align: left;
     color: var(--color-dark-blue);
@@ -2342,6 +2344,8 @@ width: 100%;
     text-transform: none;
     
 }
+
+
 
 .full__form{
     place-content: flex-start;
@@ -2825,6 +2829,11 @@ width: 100%;
     font-size: 32px;
 }
 
+.service__content__white__text{
+    font-size: 32px;
+    color: var(--color-white-background);
+}
+
 .services__small__text{
     --extracted-r6o4lv: var(--color-dark-blue);
     pointer-events: none;
@@ -2911,6 +2920,10 @@ width: 100%;
     will-change: var(--framer-will-change-override, transform);
 }
 
+.service__about__height{
+    height: 560px;
+}
+
 .service__about__content{
     height: 100%;
     width: 100%;
@@ -2926,6 +2939,49 @@ width: 100%;
 .service__text__blue{
     color: var(--color-dark-blue);
 }
+
+.service__gradient{
+    inset: 0px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: absolute;
+    will-change: var(--framer-will-change-override, transform);
+    z-index: 2;
+}
+
+.service__inset{
+    /* background: linear-gradient(180deg,  rgba(18, 44, 95, .5) 0%, rgba(7, 24, 57, 0) 100%); */
+    background: linear-gradient(0deg, rgba(18, 44, 95, 0.5) 0%, rgba(7, 24, 57, 0) 100%);
+    border-radius: 7px;
+    opacity: 1;
+}
+
+.service__icon{
+    flex: 0 0 auto;
+    height: var(--framer-aspect-ratio-supported, 32px);
+    width: 32px;
+}
+
+.service__block__text{
+    gap: 12px;
+    max-width: 360px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.service__text__small{
+    text-align: center;
+    color: var(--color-white-background);
+}
+
+.text__content__service{
+    width: auto;
+}
+
+
+
+
+
 
 /* GEO section */
 
@@ -3096,6 +3152,18 @@ width: 100%;
   position: relative;
   width: 1px;
   will-change: var(--framer-will-change-override, transform);
+}
+
+
+.service__content{
+    --border-color:  rgba(242, 242, 242, 0.2);
+    opacity: 1;
+    place-content: center space-between;
+    flex-flow: column;
+    padding: 64px 24px;
+    z-index: 3;
+    /* flex-direction: unset; */
+    flex-wrap: unset;
 }
 
 .about_us_left_main {
