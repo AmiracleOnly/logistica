@@ -2731,6 +2731,15 @@ width: 100%;
 }
 
 .services__block__grid{
+    display: grid;
+    gap: 4px;
+    grid-auto-rows: min-content;
+    grid-template-rows: repeat(1,min-content);
+    height: min-content;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 1192px;
     grid-template-columns: repeat(10, minmax(1px, 1fr));
 }
 

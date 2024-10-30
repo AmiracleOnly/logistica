@@ -57,12 +57,30 @@
           order: 11;
           display: flex;
       }
+
+    .we__text__slogan {
+        font-size: 40px;
+    }
+
+    .services__frame__text {
+        max-width: 400px;
+    }
+
+    .services__block__grid {
+        grid-template-columns: repeat(2,minmax(1px,1fr));
+        width: 720px;
+    }
+
+    .services__container__block {
+
+    }
 }
 
 @media (max-width: 767px) {
 
     .main__section {
         height: 130vh;
+        min-height: 920px;
     }
 
     .main__content {
@@ -81,7 +99,13 @@
         justify-content: flex-start;
     }
 
+    .block__text__main {
+        font-size: 56px;
+    }
 
+    .framer__content__text {
+        font-size: 56px;
+    }
 
     .main__block__btn {
         display: flex;
@@ -140,11 +164,6 @@
         padding: 160px 0 0;
     }
 
-    .global__container {
-        flex: none;
-        width: 100%;
-    }
-
     .hightlight__text__container {
         gap: 64px;
     }
@@ -169,5 +188,65 @@
 
     .framer-text__168 {
         font-size: 80px;
+    }
+
+    .global__container {
+        flex: none;
+        width: 100%;
+    }
+
+    .services {
+        gap: 64px;
+    }
+
+    .services__block__grid {
+        grid-template-columns: repeat(1,minmax(1px,1fr));
+        width: 312px;
+    }
+
+    .services__container__block {
+        grid-column: unset;
+        height: 480px;
+    }
+
+    .main__container {
+        min-height: 100vh;
+        width: auto;
+    }
+
+    .container__we {
+        flex-direction: column;
+        padding: 160px 0 0;
+    }
+
+    /* .services__block {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 4px;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 100%;
+    } */
+
+    .services__container {
+        align-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0px;
+        height: min-content;
+        justify-content: flex-start;
+        padding: 0;
+        position: relative;
+        width: 100%;
     }
 }
