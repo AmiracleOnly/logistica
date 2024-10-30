@@ -57,12 +57,53 @@
           order: 11;
           display: flex;
       }
+
+    .we__text__slogan {
+        font-size: 40px;
+    }
+
+    .services__frame__text {
+        max-width: 400px;
+    }
+
+    .services__block__grid {
+        grid-template-columns: repeat(2,minmax(1px,1fr));
+        width: 100%;
+        opacity: 1;
+    }
+
+    .services__container__block {
+        gap: 64px;
+        grid-column: unset;
+        justify-content: flex-start;
+    }
+
+    .media_service_container {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 4px;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .services__block__text {
+        gap: 110px;
+    }
 }
 
 @media (max-width: 767px) {
 
     .main__section {
         height: 130vh;
+        min-height: 920px;
     }
 
     .main__content {
@@ -81,7 +122,13 @@
         justify-content: flex-start;
     }
 
+    .block__text__main {
+        font-size: 49px;
+    }
 
+    .framer__content__text {
+        font-size: 56px;
+    }
 
     .main__block__btn {
         display: flex;
@@ -140,11 +187,6 @@
         padding: 160px 0 0;
     }
 
-    .global__container {
-        flex: none;
-        width: 100%;
-    }
-
     .hightlight__text__container {
         gap: 64px;
     }
@@ -169,5 +211,61 @@
 
     .framer-text__168 {
         font-size: 80px;
+    }
+
+    .global__container {
+        flex: none;
+        width: 100%;
+    }
+
+    .services {
+        gap: 64px;
+    }
+
+    .services__block__grid {
+        grid-template-columns: repeat(1,minmax(1px,1fr));
+        width: 100%;
+        opacity: 1;
+    }
+
+    .services__container__block {
+        grid-column: unset;
+    }
+
+    .main__container {
+        min-height: 100vh;
+        width: auto;
+    }
+
+    .container__we {
+        flex-direction: column;
+        padding: 160px 0 0;
+    }
+
+    .services__container {
+        align-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0px;
+        height: min-content;
+        justify-content: flex-start;
+        padding: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .order__1 {
+        order: 0;
+    }
+
+    .services__big__text {
+        max-width: 410px;
+    }
+
+    .services__text__slogan {
+        max-width: 420px;
     }
 }

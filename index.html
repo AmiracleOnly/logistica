@@ -369,11 +369,12 @@
                         </div>
                     </div>
                 </div>
-                <div class=" services__block">
+                <div class=" services__block media_service_block">
                     <div class="services__block services__container" >
-                        <div class="button__submit__form">
-                            <div class="block__about services__block__grid">
-                                <div class="services__container__block services__element">
+                        <div class="ssr__variant">
+                            <div class="button__submit__form">
+                                <div class="block__about services__block__grid">
+                                    <div class="services__container__block services__element">
                                     <div class="full__form services__block__text" >
                                         <div class="framer__contact  services__text__slogan" >
                                             <div class="form__label__name__full services__big__text" >
@@ -428,19 +429,21 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="services__container__block services__element services__block__img" >
+                                    </div>
+                                    <div class="services__container__block services__element services__block__img" >
                                     <div class="services__img__framer">
                                         <div class="block__left__img">
                                             <img src="/main/assets/images/truck.jpeg" alt="" class="framer__img">
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="services__block services__container" >
-                        <div class="button__submit__form">
+                        <div class="ssr__variant">
+                            <div class="button__submit__form">
                             <div class="block__about services__block__grid">
                                 <div class="services__container__block services__element order__1">
                                     <div class="full__form services__block__text" >
@@ -506,10 +509,12 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                     <div class="services__block services__container" >
-                        <div class="button__submit__form">
+                        <div class="ssr__variant">
+                            <div class="button__submit__form">
                             <div class="block__about services__block__grid">
                                 <div class="services__container__block services__element">
                                     <div class="full__form services__block__text" >
@@ -574,6 +579,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -828,40 +834,48 @@
                 });
                 
                 // Иконка маркеров
-                myIcon = DG.icon({
+                var myIcon = DG.icon({
                     iconUrl: './main/assets/icons/geo-r.svg',
                     iconSize: [39, 48],
                     iconcolor: '#254583'
                 });
+
+                var specialIcon = DG.icon({
+                    iconUrl: './main/assets/icons/geo-r-special.svg',  // путь к специальной иконке
+                    iconSize: [39, 48],
+                });
     
                 // Создание маркеров и добавление их на карту
                 var markers = [
-                    [51.1562, 71.4328],
-                    [41.2044, 74.7661],
-                    [38.9697, 59.5563],
-                    [41.3775, 64.5853],
-                    [61.5240, 105.3188],
-                    [48.3794, 31.1656],
-                    [53.7098, 27.9534],
-                    [35.9078, 127.7669],
-                    [40.0691, 45.0382],
-                    [51.9194, 19.1451],
-                    [51.1657, 10.4515],
-                    [49.8175, 15.4729],
-                    [45.9432, 24.9668],
-                    [38.9637, 35.2433],
-                    [32.4279, 53.6880],
-                    [35.8617, 104.1954],
-                    [36.2048, 138.2529],
-                    [15.8700, 100.9925],
-                    [4.2105, 101.9758],
-                    [14.0583, 108.2772]
+                    [51.1562, 71.4328, "Казахстан", specialIcon],
+                    [41.2044, 74.7661, "Кыргызстан", myIcon],
+                    [38.9697, 59.5563, "Туркменистан", myIcon],
+                    [41.3775, 64.5853, "Узбекистан", myIcon],
+                    [61.5240, 105.3188, "Россия", myIcon],
+                    [48.3794, 31.1656, "Украина", myIcon],
+                    [53.7098, 27.9534, "Белорусия", myIcon],
+                    [35.9078, 127.7669, "Корея", myIcon],
+                    [40.0691, 45.0382, "Армения", myIcon],
+                    [51.9194, 19.1451, "Польша", myIcon],
+                    [51.1657, 10.4515, "Германия", myIcon],
+                    [49.8175, 15.4729, "Чехия", myIcon],
+                    [45.9432, 24.9668, "Румыния", myIcon],
+                    [38.9637, 35.2433, "Турция", myIcon],
+                    [32.4279, 53.6880, "Иран", myIcon],
+                    [35.8617, 104.1954, "Китай", myIcon],
+                    [36.2048, 138.2529, "Япония", myIcon],
+                    [15.8700, 100.9925, "Тайланд", myIcon],
+                    [4.2105, 101.9758, "Малазия", myIcon],
+                    [14.0583, 108.2772, "Вьетнам", myIcon]
                 ];
     
                 // Добавление маркеров на карту
                 var markerObjects = markers.map(function(coords) {
-                    return DG.marker(coords, { icon: myIcon }).addTo(map).bindLabel({ static: true });
+                    return DG.marker([coords[0], coords[1]], { icon: coords[3] })
+                    .addTo(map)
+                    .bindTooltip(coords[2], { permanent: false, direction: "bottom" });  // Отображение при наведении
                 });
+
     
                 // Группировка маркеров
                 group = DG.featureGroup(markerObjects);
