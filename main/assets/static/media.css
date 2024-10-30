@@ -93,6 +93,10 @@
         position: relative;
         width: 100%;
     }
+
+    .services__block__text {
+        gap: 110px;
+    }
 }
 
 @media (max-width: 767px) {
