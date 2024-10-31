@@ -414,4 +414,21 @@
         height: 360px;
     }
 
+
+    .block__about {
+        align-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;    
+    }
+
+    .media__block__left {
+        align-self: unset;
+        order: 0;
+        align-self: unset;
+        height: 560px;
+        order: 1;
+    }
 }
