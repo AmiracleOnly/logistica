@@ -1,4 +1,14 @@
 @media (min-width: 768px) and (max-width: 1159px) {
+    
+    .main__nav__media{
+        flex: none;
+        height: auto;
+        left: 4px;
+        position: absolute;
+        right: 4px;
+        top: 0;
+        z-index: 10;
+    }
 
     .main__block__btn {
       grid-template-columns: repeat(2,minmax(1px,1fr));
