@@ -13,18 +13,37 @@ $twilioNumber = $_ENV['TWILIO_NUMBER'];
 $recipientNumber = $_ENV['RECIPIENT_NUMBER'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = htmlspecialchars($_POST['name']);
+    // Получение данных из формы
+    $from = htmlspecialchars($_POST['from']);
+    $fullName = htmlspecialchars($_POST['full__name']);
     $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    $destination = htmlspecialchars($_POST['destination']);
+    $deliveryType = htmlspecialchars($_POST['delivery__type']);
+    $telephone = htmlspecialchars($_POST['telephone']);
+    $cargoCode = htmlspecialchars($_POST['cargo_code']);
+    $comment = htmlspecialchars($_POST['comment']);
 
+    // Инициализация клиента Twilio
     $client = new Client($accountSid, $authToken);
 
+    // Формирование сообщения
+    $messageBody = "Новые данные формы:\n";
+    $messageBody .= "Откуда: $from\n";
+    $messageBody .= "ФИО: $fullName\n";
+    $messageBody .= "Email: $email\n";
+    $messageBody .= "Куда: $destination\n";
+    $messageBody .= "Тип доставки: $deliveryType\n";
+    $messageBody .= "Телефон: $telephone\n";
+    $messageBody .= "Код груза: $cargoCode\n";
+    $messageBody .= "Комментарий: $comment";
+
     try {
+        // Отправка сообщения через Twilio
         $client->messages->create(
             $recipientNumber,
             [
                 'from' => $twilioNumber,
-                'body' => "Новые данные формы:\nИмя: $name\nEmail: $email\nСообщение: $message"
+                'body' => $messageBody
             ]
         );
 
@@ -33,3 +52,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo 'Ошибка при отправке данных: ' . $e->getMessage();
     }
 }
+?>

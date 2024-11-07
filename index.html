@@ -701,118 +701,115 @@
         <div class="main__container__about__us" >
             <div class="main__block__about">
                     <div class="about_us__right">
-                        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form" >
+                        <form action="send_whatsapp.php" method="post" class="form">
                             <div class="form__subtitle form__text__calculate">
-                                <h2 class="form__action__subtitle ">РАССЧИТАТЬ СТОИМОСТЬ<br> ДОСТАВКИ ГРУЗА </h2>
+                                <h2 class="form__action__subtitle">РАССЧИТАТЬ СТОИМОСТЬ<br> ДОСТАВКИ ГРУЗА</h2>
                             </div>
-                                <div class="full__form">
-                                    <div class="form__email__container">
-                                        <div class="email__form">
-                                            <label for="full__name" class="form__label">
-                                                <div class="form__label__name__full">
-                                                    <p class="form__text">Откуда</p>
-                                                </div>
-                                                <div class="form__text__input"  >
-                                                      <input class="input__name" id="from" type="text" required name="full__name" placeholder="КАЗАХСТАН,АЛМАТЫ" >
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="tel__form">
-                                            <label for="full__name" class="form__label">
-                                                <div class="form__label__name__full">
-                                                    <p class="form__text">ФИО</p>
-                                                </div>
-                                                <div class="form__text__input">
-                                                      <input class="input__name" id="full__name" type="text" required name="full__name" placeholder="John Anderson">
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form__email__container">
-                                        <div class="email__form">
-                                            <label for="email" class="email__label">
-                                                <div class="form__label__name__full">
-                                                    <p class="form__text">КУДА</p>
-                                                </div>
-                                                <div class="form__text__input">
-                                                    <input type="email" id="email" class="input__name" placeholder="РОССИЯ, МОСКВА" >
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="tel__form">
-                                            <label for="email" class="email__label">
-                                                <div class="form__label__name__full">
-                                                    <p class="form__text">EMAIL</p>
-                                                </div>
-                                                <div class="form__text__input">
-                                                    <input type="email" required name="email" id="email" class="input__name" placeholder="john.anderson@gmail.com" >
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form__email__container">
-                                        <div class="email__form">
-                                            <label for="delivery__type" class="delivery__label">
-                                                <div class="form__label__name__full">
-                                                    <p class="form__text">ТИП ДОСТАВКИ</p>
-                                                </div>
-                                                <div class="form__text__input">
-                                                    <select name="delivery__type" id="delivery__type" class="input__name">
-                                                            <option value="rail">ЖД</option>
-                                                            <option value="auto">АВТО</option>
-                                                            <option value="air">АВИА</option>
-                                                    </select>
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="tel__form">
-                                            <label for="telephone" class="telephone__label">
-                                                 <div class="form__label__name__full">
-                                                    <p class="form__text">TELEPHONE</p>
-                                                 </div>
-                                                 <div class="form__text__input">
-                                                    <input type="tel" required name="telephone" id="telephone" class="input__name" placeholder="+7 (700) 700-0000">
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form__email__container">
-                                        <div class="email__form">
-                                            <label for="email" class="email__label">
-                                                <div class="form__label__name__full">
-                                                    <p class="form__text">КОД ГРУЗА</p>
-                                                </div>
-                                                <div class="form__text__input">
-                                                    <input type="email"  id="email" class="input__name" placeholder="20" >
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="tel__form">
-                                            <label for="telephone" class="telephone__label">
-                                                 <div class="form__label__name__full">
-                                                    <p class="form__text">КОММЕНТАРИЙ</p>
-                                                 </div>
-                                                 <div class="form__text__input">
-                                                    <input type="tel"  id="comment" class="input__name" placeholder="ХРУПКОЕ">
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>                               
-                                </div>
-                                <div class="form__button">
-                                    <div class="button__submit__form">
-                                        <button type="submit" class="btn__form framer-btn">
-                                            <div class="btn__form">
-                                                <div class="btn__form__submit">
-                                                    <p class="btn__text framer-text">
-                                                        ОТПРАВИТЬ
-                                                    </p>
-                                                </div>
+                            <div class="full__form">
+                                <div class="form__email__container">
+                                    <div class="email__form">
+                                        <label for="from" class="form__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">Откуда</p>
                                             </div>
-                                        </button>
+                                            <div class="form__text__input">
+                                                <input class="input__name" id="from" type="text" required name="from" placeholder="КАЗАХСТАН, АЛМАТЫ">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="tel__form">
+                                        <label for="full__name" class="form__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">ФИО</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <input class="input__name" id="full__name" type="text" required name="full__name" placeholder="John Anderson">
+                                            </div>
+                                        </label>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="form__email__container">
+                                    <div class="email__form">
+                                        <label for="destination" class="form__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">Куда</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <input type="text" id="destination" class="input__name" placeholder="РОССИЯ, МОСКВА" required>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="tel__form">
+                                        <label for="email" class="email__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">Email</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <input type="email" required name="email" id="email" class="input__name" placeholder="john.anderson@gmail.com">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form__email__container">
+                                    <div class="email__form">
+                                        <label for="delivery__type" class="delivery__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">Тип доставки</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <select name="delivery__type" id="delivery__type" class="input__name">
+                                                    <option value="rail">ЖД</option>
+                                                    <option value="auto">АВТО</option>
+                                                    <option value="air">АВИА</option>
+                                                </select>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="tel__form">
+                                        <label for="telephone" class="telephone__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">Телефон</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <input type="tel" required name="telephone" id="telephone" class="input__name" placeholder="+7 (700) 700-0000">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form__email__container">
+                                    <div class="email__form">
+                                        <label for="cargo_code" class="email__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">Код груза</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <input type="text" id="cargo_code" name="cargo_code" class="input__name" placeholder="20">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="tel__form">
+                                        <label for="comment" class="telephone__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">Комментарий</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <input type="text" id="comment" name="comment" class="input__name" placeholder="ХРУПКОЕ">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__button">
+                                <div class="button__submit__form">
+                                    <button type="submit" class="btn__form framer-btn">
+                                        <div class="btn__form__submit">
+                                            <p class="btn__text framer-text">Отправить</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
                         </div>
                
             </div>
