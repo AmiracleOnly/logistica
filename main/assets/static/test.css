@@ -3300,9 +3300,10 @@ font-style: normal;
 font-weight: 500;
 font-size: 19px;
 line-height: 106%;
-text-transform: uppercase;
+/* text-transform: uppercase; */
 color: #254583;
 }
+
 
 /* End Main about section */
 
