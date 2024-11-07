@@ -10,6 +10,29 @@
         z-index: 10;
     }
 
+    .nav__text{
+        font-size: 12px;
+    }
+
+    
+    .about_container {
+        /* flex: none; */
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .about_us_content {
+        flex: none;
+        height: 560px;
+        width: 100%;
+    }
+
+    .about_us_right_main {
+        /* flex: none; */
+        height: min-content;
+        width: 100%;
+    }
+
     .main__block__btn {
       grid-template-columns: repeat(2,minmax(1px,1fr));
     }
@@ -107,6 +130,36 @@
     .services__block__text {
         gap: 110px;
     }
+
+    .main__block__about{
+        padding: inherit;
+    }
+
+
+    /*CONTACT*/
+
+   
+    .block__about{
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .media__block__left{
+        align-self: unset;
+        height: 880px;
+        order: 1;
+    }
+
+
+    .main__block__content{
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+         gap: 16px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -116,11 +169,46 @@
         min-height: 920px;
     }
 
+    .main__contact{
+        height: 100vh;
+    }
+
+    .nav__text{
+        font-size: 12px;
+    }
+
+    .nav__menu{
+        display: none;
+    }
+
+
     .main__content {
         /* flex: none; */
         height: min-content;
         padding: 187px 0 40px;
     }
+
+    .contact__mobile{
+        flex-direction: column;
+        height: min-content;
+        min-height: unset;
+    }
+
+    .contact__mobile__us{
+        flex: 0 0 auto;
+        height: min-content;
+        width: 100%;
+    }
+
+    .contact__main{
+        flex: 0 0 auto;
+    }
+
+    .contact__hero{
+        flex: 0 0 auto;
+        height: min-content;
+    }
+
 
     .main__none__btn {
         align-content: flex-start;
@@ -133,7 +221,7 @@
     }
 
     .block__text__main {
-        font-size: 49px;
+        font-size: 35px;
     }
 
     .framer__content__text {
@@ -142,6 +230,24 @@
 
     .main__block__btn {
         display: flex;
+    }
+
+    .about_container {
+        /* flex: none; */
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .about_us_content {
+        flex: none;
+        height: 560px;
+        width: 100%;
+    }
+
+    .about_us_right_main {
+        /* flex: none; */
+        height: min-content;
+        width: 100%;
     }
 
     .gis {
@@ -335,6 +441,88 @@
         height: 360px;
     } */
 
+    .main__block__about{
+        padding: 0;
+    }
+
+        /*CONTACT*/
+
+        .main__block__content{
+            place-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex-flow: column;
+             gap: 16px;
+        }
+
+        .block__about{
+            place-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex-flow: column;
+        }
+    
+        .media__block__left{
+            align-self: unset;
+            height: 880px;
+            order: 1;
+        }
+
+}
+
+@media (max-width: 600px) {
+
+    .about_container {
+        /* flex: none; */
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .about_us_content {
+        flex: none;
+        height: 560px;
+        width: 100%;
+    }
+
+    .about_us_right_main {
+        /* flex: none; */
+        height: min-content;
+        width: 100%;
+    }
+
+    .form__email__container {
+        place-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about_us__right{
+        width: 100%;
+    }
+
+    .main__block__about {
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    .email__form {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .tel__form {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .form__action__subtitle {
+        font-size: 28px;
+    }
+
 }
 
 
@@ -369,7 +557,7 @@
     }
 
     .block__text__main {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .block__left {

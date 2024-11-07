@@ -3528,7 +3528,8 @@ color: #254583;
     overflow: hidden;
     padding: 0px;
     position: relative;
-    width: 70%;
+    width: 100%;
+    padding: 0 124px;
 }
 
 /* END Main form section */
