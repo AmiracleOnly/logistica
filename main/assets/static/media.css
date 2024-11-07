@@ -112,12 +112,12 @@
 @media (max-width: 767px) {
 
     .main__section {
-        height: 130vh;
+        height: 50vh;
         min-height: 920px;
     }
 
     .main__content {
-        flex: none;
+        /* flex: none; */
         height: min-content;
         padding: 187px 0 40px;
     }
