@@ -179,13 +179,7 @@
     }
 
 
-    .main__block__content{
-        place-content: flex-start;
-        align-items: flex-start;
-        display: flex;
-        flex-flow: column;
-         gap: 16px;
-    }
+ 
 }
 
 @media (max-width: 767px) {
@@ -456,41 +450,6 @@
         justify-content: flex-start;
     }
 
-    /* .about__section {
-        flex-direction: column;
-        height: min-content;
-        min-height: unset;
-    }
-
-    .main__about___us {
-        flex: none;
-        height: min-content;
-        width: 100%;
-    }
-
-    .about_container {
-        flex: none;
-        flex-direction: column;
-        height: min-content;
-    }
-
-    .about_us_content {
-        flex: none;
-        height: 560px;
-        width: 100%;
-    }
-
-    .about_us_right_main {
-        flex: none;
-        height: min-content;
-        width: 100%;
-    }
-
-    .about_us_draw_second {
-        flex: none;
-        height: 360px;
-    } */
-
     .hero__mobile__contact{
         align-content: flex-start;
         align-items: flex-start;
@@ -522,10 +481,10 @@
 
         .main__block__content{
             place-content: flex-start;
-            align-items: flex-start;
+            /* align-items: flex-start; */
             display: flex;
             flex-flow: column;
-             gap: 16px;
+             /* gap: 16px; */
         }
 
         .block__about{
@@ -540,6 +499,32 @@
             height: 880px;
             order: 1;
         }
+
+        /*LOGISTIC*/
+        .btn__mobile__logistic{
+            width: 100%;
+        }
+
+        .service__mobile__btn{
+            flex-flow: column;
+        }
+
+        .services__btn{
+            width: 100%;
+        }
+
+        .global__mobile{
+            padding: 0 4px;
+        }
+
+        /*ABOUT*/
+
+        /* .main__block__content{
+            place-content: flex-start;
+            display: flex;
+            flex-flow: column;
+        } */
+        
 
 }
 
