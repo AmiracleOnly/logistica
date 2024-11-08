@@ -178,6 +178,12 @@
         order: 1;
     }
 
+    /*SERVICES*/
+
+    .service__page__mobile__grid{
+        grid-template-columns: repeat(2, minmax(1px, 1fr));
+    }
+
 
  
 }
@@ -517,13 +523,15 @@
             padding: 0 4px;
         }
 
-        /*ABOUT*/
+            /*SERVICES*/
 
-        /* .main__block__content{
-            place-content: flex-start;
-            display: flex;
-            flex-flow: column;
-        } */
+        .service__page__mobile__grid{
+        grid-template-columns: repeat(1, minmax(1px, 1fr));
+        }
+
+        .partner__mobile{
+            padding: 160px 0 200px;
+        }
         
 
 }
