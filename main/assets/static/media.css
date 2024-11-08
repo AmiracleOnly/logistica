@@ -589,6 +589,12 @@
         font-size: 28px;
     }
 
+    /*ABOUT*/
+
+    .faq__mobile{
+        flex-direction: column;
+    }
+
 }
 
 
