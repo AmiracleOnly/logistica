@@ -737,6 +737,10 @@
     .block__text__main {
         font-size: 40px;
     }
+
+    .framer-text-24 {
+        font-size: 16px;
+    }
 }
 
 
@@ -932,5 +936,9 @@
 
     .framer-text-24 {
         font-size: 10px;
+    }
+
+    .about__container.footer__logo {
+        display: flex;  
     }
 }
