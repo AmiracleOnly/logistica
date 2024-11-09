@@ -14,13 +14,70 @@
         <div class="main__about__us ">
             <div class=" hero__content__about">
                 <div class="flg__container">
-                    <nav class="hero__nav nav">
+                    <nav class="hero__nav nav nav__fixed__mobile">
                         <div class="main__nav">
+                            <div class=" button__menu">
+                                <button class="menu-toggle" onclick="toggleMenu()">☰ </button>
+                            </div>
+                            <nav id="dropdown-menu" class="menu">
+                                <button class="close-button" onclick="toggleMenu()">X</button>
+                                <ul class="navig">
+                                    <div class="navigacia"></div>
+                                    <div class="nav__about">
+                                        <a href="/index.html" class="nav__link">
+                                            <div class="cub nav__cub__transform"></div>
+                                            <div class="nav__link__about">
+                                                <p class="nav__text nav__text__p__14">главная</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav__about">
+                                        <a href="/index.html#calculate" class="nav__link">
+                                            <div class="cub nav__cub__transform"></div>
+                                            <div class="nav__link__about">
+                                                <p class="nav__text nav__text__p__14">рассчитать стоимость</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav__about">
+                                        <a href="/main/services.html" class="nav__link">
+                                            <div class="cub nav__cub__transform"></div>
+                                            <div class="nav__link__about">
+                                                <p class="nav__text nav__text__p__14">услуги</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav__about">
+                                        <a href="/main/about.html" class="nav__link">
+                                            <div class="cub nav__cub__transform"></div>
+                                            <div class="nav__link__about">
+                                                <p class="nav__text nav__text__p__14">о компании</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav__about">
+                                        <a href="/main/contact.html" class="nav__link">
+                                            <div class="cub nav__cub__transform"></div>
+                                            <div class="nav__link__about">
+                                                <p class="nav__text nav__text__p__14">контакты</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav__about">
+                                        <a href="/main/logistic.html" class="nav__link">
+                                            <div class="cub nav__cub__transform"></div>
+                                            <div class="nav__link__about">
+                                                <p class="nav__text nav__text__p__14">перевозки</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </ul>
+                            </nav>
                             <div class="main__nav__content">
                                 <div class="logo__content">
                                     <div class="logo__container">
                                         <a href="/index.html" class="logo__link">
-                                            <img src="/main/assets/images/logo_norm.svg" alt="logo">
+                                            <img src="/main/assets/images/logo_norm.svg" alt="logo" class="logo__img">
                                         </a>
                                     </div>
                                 </div>
@@ -102,8 +159,8 @@
                                         <p class="block__right__text__small">Browse our portfolio to see a collection of innovative and impactful projects that highlight our architectural expertise.</p>
                                     </div>
                                     <div class="ssr__variant">
-                                        <div class="btn block__right__btn">
-                                            <a href="/contact.html" class="block__right__btn__link">
+                                        <div class="btn block__right__btn btn__mobile__logistic">
+                                            <a href="/contact.html" class="block__right__btn__link btn__mobile__logistic">
                                                 <div class="btn__right">
                                                     <div class="btn__right__transform">
                                                         <p class="btn__right__text">GET IN TOUCH</p>
@@ -134,7 +191,7 @@
         </div>
     </section>
     <section class="section__container container__we">
-        <div class="global__container">
+        <div class="global__container global__mobile">
             <div class="services">
                 <div class="__btn__ services__frame">
                     <div class="we__img__container services__frame__text">
@@ -201,7 +258,7 @@
                                         </div>
                                         <div class="full__form services__key" ></div>
                                     </div>
-                                    <div class="faq__content__slogan services__block__btn" >
+                                    <div class="faq__content__slogan services__block__btn  service__mobile__btn " >
                                         <div class="faq__name__btn services__btn" >
                                             <a href="/contact.html#about__container" class="block__right__btn__link ">
                                                 <div class="btn__right">
@@ -279,7 +336,7 @@
                                         </div>
                                         <div class="full__form services__key" ></div>
                                     </div>
-                                    <div class="faq__content__slogan services__block__btn" >
+                                    <div class="faq__content__slogan services__block__btn service__mobile__btn" >
                                         <div class="faq__name__btn services__btn" >
                                             <a href="" class="block__right__btn__link ">
                                                 <div class="btn__right">
@@ -357,7 +414,7 @@
                                         </div>
                                         <div class="full__form services__key" ></div>
                                     </div>
-                                    <div class="faq__content__slogan services__block__btn" >
+                                    <div class="faq__content__slogan services__block__btn service__mobile__btn" >
                                         <div class="faq__name__btn services__btn" >
                                             <a href="" class="block__right__btn__link ">
                                                 <div class="btn__right">
@@ -382,162 +439,6 @@
                                     <div class="services__img__framer">
                                         <div class="block__left__img">
                                             <img src="/main/assets/images/craiser.jpeg" alt="" class="framer__img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services__block services__container" >
-                        <div class="button__submit__form">
-                            <div class="block__about services__block__grid">
-                                <div class="services__container__block services__element order__1">
-                                    <div class="full__form services__block__text">
-                                        <div class="framer__contact  services__text__slogan" >
-                                            <div class="form__label__name__full services__big__text" >
-                                                <h3 class="block__text__main services__main__text" >Central Park Urban Retreat</h3>
-                                            </div>
-                                            <div class="form__label__name__full services__small__text" >
-                                                <p class="nav__text__p__14">Central Park Urban Retreat is a vibrant public space that brings the community together, offering green areas, seating, and art for relaxation and events.</p>
-                                            </div>
-                                        </div>
-                                        <div class="form__button services__text__number" >
-                                            <div class="button__submit__form">
-                                                <div class="services__block hero__nav services__location">
-                                                    <div class="framer__faq__question services__location__frame">
-                                                        <p class="framer-text-12">LOCATION</p>
-                                                    </div>
-                                                    <div class="form__label__name__full services__location__text">
-                                                        <p class="framer-text-12">Austin, TX, USA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="button__submit__form">
-                                                 <div class="services__block hero__nav services__location">
-                                                    <div class="framer__faq__question services__location__frame">
-                                                        <p class="framer-text-12">LOCATION</p>
-                                                    </div>
-                                                    <div class="form__label__name__full services__location__text">
-                                                        <p class="framer-text-12">Austin, TX, USA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="button__submit__form">
-                                                <div class="services__block hero__nav services__location">
-                                                    <div class="framer__faq__question services__location__frame">
-                                                        <p class="framer-text-12">LOCATION</p>
-                                                    </div>
-                                                    <div class="form__label__name__full services__location__text">
-                                                        <p class="framer-text-12">Austin, TX, USA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="full__form services__key" ></div>
-                                    </div>
-                                    <div class="faq__content__slogan services__block__btn" >
-                                        <div class="faq__name__btn services__btn" >
-                                                <a href="" class="block__right__btn__link ">
-                                                <div class="btn__right">
-                                                    <div class="btn__right__transform">
-                                                        <p class="framer-text-12 btn__right__text">Оставить заявку</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="faq__name__btn services__btn" >
-                                            <a href="" class="block__right__btn__link white__btn">
-                                                <div class="btn__right">
-                                                    <div class="btn__right__transform">
-                                                        <p class="framer-text-12">расчитать стоимость</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="services__container__block services__element services__block__img" >
-                                    <div class="services__img__framer">
-                                        <div class="block__left__img">
-                                            <img src="/main/assets/images/craiser.jpeg" alt="" class="framer__img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services__block services__container" >
-                        <div class="button__submit__form">
-                            <div class="block__about services__block__grid">
-                                <div class="services__container__block services__element">
-                                    <div class="full__form services__block__text" >
-                                        <div class="framer__contact  services__text__slogan" >
-                                            <div class="form__label__name__full services__big__text" >
-                                                <h3 class="block__text__main services__main__text" >Central Park Urban Retreat</h3>
-                                            </div>
-                                            <div class="form__label__name__full services__small__text" >
-                                                <p class="nav__text__p__14">Central Park Urban Retreat is a vibrant public space that brings the community together, offering green areas, seating, and art for relaxation and events.</p>
-                                            </div>
-                                        </div>
-                                        <div class="form__button services__text__number" >
-                                            <div class="button__submit__form">
-                                                <div class="services__block hero__nav services__location">
-                                                    <div class="framer__faq__question services__location__frame">
-                                                        <p class="framer-text-12">LOCATION</p>
-                                                    </div>
-                                                    <div class="form__label__name__full services__location__text">
-                                                        <p class="framer-text-12">Austin, TX, USA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="button__submit__form">
-                                                 <div class="services__block hero__nav services__location">
-                                                    <div class="framer__faq__question services__location__frame">
-                                                        <p class="framer-text-12">LOCATION</p>
-                                                    </div>
-                                                    <div class="form__label__name__full services__location__text">
-                                                        <p class="framer-text-12">Austin, TX, USA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="button__submit__form">
-                                                 <div class="services__block hero__nav services__location">
-                                                    <div class="framer__faq__question services__location__frame">
-                                                        <p class="framer-text-12">LOCATION</p>
-                                                    </div>
-                                                    <div class="form__label__name__full services__location__text">
-                                                        <p class="framer-text-12">Austin, TX, USA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="full__form services__key" ></div>
-                                    </div>
-                                    <div class="faq__content__slogan services__block__btn" >
-                                        <div class="faq__name__btn services__btn" >
-                                            <a href="" class="block__right__btn__link ">
-                                                <div class="btn__right">
-                                                    <div class="btn__right__transform">
-                                                        <p class="framer-text-12 btn__right__text">Оставить заявку</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="faq__name__btn services__btn" >
-                                            <a href="" class="block__right__btn__link white__btn">
-                                                <div class="btn__right">
-                                                    <div class="btn__right__transform">
-                                                        <p class="framer-text-12">расчитать стоимость</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="services__container__block services__element services__block__img" >
-                                    <div class="services__img__framer">
-                                        <div class="block__left__img">
-                                            <img src="/images/truck.jpeg" alt="" class="framer__img">
                                         </div>
                                     </div>
                                 </div>
@@ -545,6 +446,95 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="about__container">
+        <div class="container__about__us">
+            <div class="block__about">
+                <div class="block__left media__block__left">
+                    <div class="block__left__img">
+                        <img src="/main/assets/images/woman-using-smartphone-as-habit.png" alt="contact" class="img__about__us">
+                    </div>
+                </div>
+                    <div class="about_us_right">
+                        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form">
+                            <div class="form__subtitle">
+                                <h2 class="form__action__subtitle">остались вопросы?<br>мы ответим на вопросы </h2>
+                            </div>
+                                <div class="full__form">
+                                    <div class="form__name__container">
+                                        <label for="full__name" class="form__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">ФИО</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                  <input class="input__name" id="full__name" type="text" required name="full__name" placeholder="John Anderson">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form__email__container">
+                                        <div class="email__form">
+                                            <label for="email" class="email__label">
+                                                <div class="form__label__name__full">
+                                                    <p class="form__text">EMAIL</p>
+                                                </div>
+                                                <div class="form__text__input">
+                                                    <input type="email" required name="email" id="email" class="input__name" placeholder="john.anderson@gmail.com" >
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="tel__form">
+                                            <label for="telephone" class="telephone__label">
+                                                 <div class="form__label__name__full">
+                                                    <p class="form__text">TELEPHONE</p>
+                                                 </div>
+                                                 <div class="form__text__input">
+                                                    <input type="tel" required name="telephone" id="telephone" class="input__name" placeholder="+7 (700) 700-0000">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form__delivery__container">
+                                        <label for="delivery__type" class="delivery__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">ТИП ДОСТАВКИ</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <select name="delivery__type" id="delivery__type" class="input__name">
+                                                        <option value="rail">ЖД</option>
+                                                        <option value="auto">АВТО</option>
+                                                        <option value="air">АВИА</option>
+                                                </select>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form__comment__container">
+                                        <label for="comment" class="comment__label">
+                                            <div class="form__label__name__full">
+                                                <p class="form__text">КОММЕНТАРИИ</p>
+                                            </div>
+                                            <div class="form__text__input">
+                                                <input type="text" id="com" name="comment" class="input__name" placeholder="ХРУПКОЕ">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form__button">
+                                    <div class="button__submit__form">
+                                        <button type="submit" class="btn__form framer-btn">
+                                            <div class="btn__form">
+                                                <div class="btn__form__submit">
+                                                    <p class="btn__text framer-text">
+                                                        ОТПРАВИТЬ
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
             </div>
         </div>
     </section>
@@ -699,5 +689,6 @@
         </div>
     </section>
     </div>
+    <script src="/main/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,30 @@
 @media (min-width: 768px) and (max-width: 1159px) {
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        display: none;
+    }
+    
+    .menu.active {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    .main__nav{
+        flex-direction: unset;
+    }
     
     .main__nav__media{
         flex: none;
@@ -8,6 +34,29 @@
         right: 4px;
         top: 0;
         z-index: 10;
+    }
+
+    .nav__text{
+        font-size: 12px;
+    }
+
+    
+    .about_container {
+        /* flex: none; */
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .about_us_content {
+        flex: none;
+        height: 560px;
+        width: 100%;
+    }
+
+    .about_us_right_main {
+        /* flex: none; */
+        height: min-content;
+        width: 100%;
     }
 
     .main__block__btn {
@@ -108,6 +157,36 @@
         gap: 110px;
     }
 
+    .main__block__about{
+        padding: inherit;
+    }
+
+
+    /*CONTACT*/
+
+   
+    .block__about{
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .media__block__left{
+        align-self: unset;
+        height: 880px;
+        order: 1;
+    }
+
+    /*SERVICES*/
+
+    .service__page__mobile__grid{
+        grid-template-columns: repeat(2, minmax(1px, 1fr));
+    }
+
+
+ 
+
     
     .global__footer {
         opacity: 1;
@@ -180,16 +259,86 @@
 
 @media (max-width: 767px) {
 
+    .menu-toggle {
+        display: block;
+        font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-dark-blue);
+    }
+
+    .nav__fixed__mobile {
+        position: fixed; /* Закрепляем меню к верхней части экрана */
+        top: 0;
+        left: 4;
+        width: 99%;
+        z-index: 1000; /* Высокий индекс для того, чтобы меню всегда было поверх остальных элементов */
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для отделения меню от контента */
+       
+      
+    }
+
+    .main__nav__content{
+        display: flex;
+    }
+
+    .main__nav{
+        flex-direction: unset;
+    }
+
+    .logo__content{
+        width: 100%;
+    }
+
     .main__section {
-        height: 130vh;
+        height: 50vh;
         min-height: 920px;
     }
 
+    .main__contact{
+        height: 100vh;
+    }
+
+    .nav__text{
+        font-size: 12px;
+    }
+
+    .nav__menu{
+        display: none;
+    }
+
+   
+
+
     .main__content {
-        flex: none;
+        /* flex: none; */
         height: min-content;
         padding: 187px 0 40px;
     }
+
+    .contact__mobile{
+        flex-direction: column;
+        height: min-content;
+        min-height: unset;
+    }
+
+    .contact__mobile__us{
+        flex: 0 0 auto;
+        height: min-content;
+        width: 100%;
+    }
+
+    .contact__main{
+        flex: 0 0 auto;
+    }
+
+    .contact__hero{
+        flex: 0 0 auto;
+        height: min-content;
+    }
+
 
     .main__none__btn {
         align-content: flex-start;
@@ -202,7 +351,7 @@
     }
 
     .block__text__main {
-        font-size: 49px;
+        font-size: 35px;
     }
 
     .framer__content__text {
@@ -211,6 +360,24 @@
 
     .main__block__btn {
         display: flex;
+    }
+
+    .about_container {
+        /* flex: none; */
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .about_us_content {
+        flex: none;
+        height: 560px;
+        width: 100%;
+    }
+
+    .about_us_right_main {
+        /* flex: none; */
+        height: min-content;
+        width: 100%;
     }
 
     .gis {
@@ -295,6 +462,7 @@
     .global__container {
         flex: none;
         width: 100%;
+        /* padding: 0 4px; */
     }
 
     .services {
@@ -369,20 +537,90 @@
         justify-content: flex-start;
     }
 
-    /* .about__section {
+    .hero__mobile__contact{
+        align-content: flex-start;
+        align-items: flex-start;
+        background-color: var(--color-white-background);
+        border-radius: 8px;
+        display: flex;
+        flex: none;
         flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0px;
         height: min-content;
-        min-height: unset;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        will-change: var(--framer-will-change-override, transform);
     }
 
-    .main__about___us {
-        flex: none;
-        height: min-content;
-        width: 100%;
+    .main__block__about{
+        padding: 0;
     }
+
+    .partner_container{
+        padding: 0;
+    }
+
+        /*CONTACT*/
+
+        .main__block__content{
+            place-content: flex-start;
+            /* align-items: flex-start; */
+            display: flex;
+            flex-flow: column;
+             /* gap: 16px; */
+        }
+
+        .block__about{
+            place-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex-flow: column;
+        }
+    
+        .media__block__left{
+            align-self: unset;
+            height: 880px;
+            order: 1;
+        }
+
+        /*LOGISTIC*/
+        .btn__mobile__logistic{
+            width: 100%;
+        }
+
+        .service__mobile__btn{
+            flex-flow: column;
+        }
+
+        .services__btn{
+            width: 100%;
+        }
+
+        .global__mobile{
+            padding: 0 4px;
+        }
+
+            /*SERVICES*/
+
+        .service__page__mobile__grid{
+        grid-template-columns: repeat(1, minmax(1px, 1fr));
+        }
+
+        .partner__mobile{
+            padding: 160px 0 200px;
+        }
+        
+
+}
+
+@media (max-width: 600px) {
 
     .about_container {
-        flex: none;
+        /* flex: none; */
         flex-direction: column;
         height: min-content;
     }
@@ -394,15 +632,49 @@
     }
 
     .about_us_right_main {
-        flex: none;
+        /* flex: none; */
         height: min-content;
         width: 100%;
     }
 
-    .about_us_draw_second {
-        flex: none;
-        height: 360px;
-    } */
+    .form__email__container {
+        place-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about_us__right{
+        width: 100%;
+    }
+
+    .main__block__about {
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    .email__form {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .tel__form {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .form__action__subtitle {
+        font-size: 28px;
+    }
+
+    /*ABOUT*/
+
+    .faq__mobile{
+        flex-direction: column;
+    }
 
     .block__text__main {
         font-size: 40px;
@@ -411,6 +683,23 @@
 
 
 @media (max-width: 399px) {
+
+
+    .nav__fixed__mobile {
+        position: fixed; /* Закрепляем меню к верхней части экрана */
+        top: 0;
+        left: 4;
+        width: 98%;
+        z-index: 1000; /* Высокий индекс для того, чтобы меню всегда было поверх остальных элементов */
+        border-radius:  4px ;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для отделения меню от контента */
+       
+      
+    }
+
+    .logo__img{
+        width: 100%;
+    }
     .form__email__container {
         place-content: flex-start;
         align-items: flex-start;
@@ -441,7 +730,7 @@
     }
 
     .block__text__main {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .block__left {

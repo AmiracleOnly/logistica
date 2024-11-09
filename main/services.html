@@ -12,14 +12,71 @@
         <section class="main__section section__container ">
             <div class="main__about__us ">
                 <div class="hero__content">
-                    <div class="flg__container">
-                        <nav class="hero__nav nav">
+                    <div class="flg__container flg__mobile">
+                        <nav class="hero__nav nav nav__fixed__mobile">
                             <div class="main__nav">
+                                <div class=" button__menu">
+                                    <button class="menu-toggle" onclick="toggleMenu()">☰ </button>
+                                </div>
+                                <nav id="dropdown-menu" class="menu">
+                                    <button class="close-button" onclick="toggleMenu()">X</button>
+                                    <ul class="navig">
+                                        <div class="navigacia"></div>
+                                        <div class="nav__about">
+                                            <a href="/index.html" class="nav__link">
+                                                <div class="cub nav__cub__transform"></div>
+                                                <div class="nav__link__about">
+                                                    <p class="nav__text nav__text__p__14">главная</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav__about">
+                                            <a href="/index.html#calculate" class="nav__link">
+                                                <div class="cub nav__cub__transform"></div>
+                                                <div class="nav__link__about">
+                                                    <p class="nav__text nav__text__p__14">рассчитать стоимость</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav__about">
+                                            <a href="/main/services.html" class="nav__link">
+                                                <div class="cub nav__cub__transform"></div>
+                                                <div class="nav__link__about">
+                                                    <p class="nav__text nav__text__p__14">услуги</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav__about">
+                                            <a href="/main/about.html" class="nav__link">
+                                                <div class="cub nav__cub__transform"></div>
+                                                <div class="nav__link__about">
+                                                    <p class="nav__text nav__text__p__14">о компании</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav__about">
+                                            <a href="/main/contact.html" class="nav__link">
+                                                <div class="cub nav__cub__transform"></div>
+                                                <div class="nav__link__about">
+                                                    <p class="nav__text nav__text__p__14">контакты</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="nav__about">
+                                            <a href="/main/logistic.html" class="nav__link">
+                                                <div class="cub nav__cub__transform"></div>
+                                                <div class="nav__link__about">
+                                                    <p class="nav__text nav__text__p__14">перевозки</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </nav>
                                 <div class="main__nav__content">
                                     <div class="logo__content">
                                         <div class="logo__container">
                                             <a href="/index.html" class="logo__link">
-                                                <img src="/main/assets/images/logo_norm.svg" alt="logo">
+                                                <img src="/main/assets/images/logo_norm.svg" alt="logo" class="logo__img">
                                             </a>
                                         </div>
                                     </div>
@@ -34,7 +91,7 @@
                                                 </a>
                                             </div>
                                             <div class="nav__about">
-                                                <a href="/index.html#calculateb" class="nav__link">
+                                                <a href="/index.html#calculate" class="nav__link">
                                                     <div class="cub nav__cub__transform"></div>
                                                     <div class="nav__link__about">
                                                         <p class="nav__text nav__text__p__14">рассчитать стоимость</p>
@@ -190,7 +247,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="service__page__grid">
+                    <div class="service__page__grid service__page__mobile__grid">
                         <div class="about_us_right service__about__height">
                             <div class="service__about service__about__content">
                                 <div class="about_us_content service__content">
@@ -345,6 +402,304 @@
                 </div>
             </div>
         </section>
+        <section class="partners-section partner__mobile">
+            <div class="partner_container">
+                <div class="partner__container">
+                    <div class="ssr__variant">
+                        <div class="block__right__btn">
+                            <div class="btn__we btn">
+                                <div class="cub__siganl cub__white"></div>
+                                <div class="nav__link__about">
+                                    <p class="block__text__we">OUR PROJECT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners">
+                        <div class="ssr__variant">
+                            <div class="partner_block partner0">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner1">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner2">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner3">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner4">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner5">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner6">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner7">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner9">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ssr__variant">
+                            <div class="partner_block partner10">
+                                <a class="partners_block">
+                                    <div class="logo_container">
+                                        <div class="logo___container">
+                                            <img class="logo_partner" src="/main/assets/icons/svgforwardLogistic.svg"></img>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="partner_block partner11">
+                            <a class="partners_block">
+                                <div class="logo_container">
+                                    <div class="logo___container">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="partner_block partner8">
+                            <a class="partners_block">
+                                <div class="logo_container">
+                                    <div class="logo___container">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text_bottom_partners">
+                        <p class="text_bottom_partners__text">Мы гордимся тем, нам доверяют клиенты, которые бросают нам вызов в инновациях и достижениях.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__container">
+            <div class="ssr__variant">
+                <div class="flg__container">
+                    <footer class="global-framer-main framer__footer">
+                        <div class="global__container global__footer">
+                            <div class="btn global__footer__btn">
+                                <div class="main__nav__content footer__nav">
+                                    <div class="main__block__right footer__nav__block">
+                                        <div class="about__container footer__logo  ">
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="/index.html" class="logo__link ">
+                                                    <div class="logo__framer">
+                                                        <div class="logo__framer__px">
+                                                            <div style="width: 100%; height: 100%; aspect-ratio: inherit;">
+                                                                <img src="/main/assets/icons/logoFooter.svg" alt="logo" class="logo__small__footer">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="begin__text__slogan footer__slogan">
+                                                <p class="framer-text-12">We create innovative architectural solutions that inspire and endure.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hightlight__text__btn__ hightlight__btn__">
+                                            <p class="framer-text-12">© 2024, forward logistic group</p>
+                                        </div>
+                                    </div>
+                                <div class="nav__framer footer__nav__framer">
+                                    <div class="main__content footer__block__content">
+                                        <div class="begin__text__slogan footer__slogan">
+                                            <p class="framer-text-12">overview</p>
+                                        </div>
+                                        <div class="footer__nav__text">
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="/main/about.html" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            О нас
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="/main/logistic.html" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            Перевозки
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="/main/services.html" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            Услуги
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main__content footer__block__content">
+                                        <div class="begin__text__slogan footer__slogan">
+                                            <p class="framer-text-12">engage</p>
+                                        </div>
+                                        <div class="footer__nav__text">
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="/main/logistic.html#railway" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            ЖД
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="/main/logistic.html#auto" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            Авто
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="/main/logistic.html#multymodal" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            Мультимодальные первозки
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main__content footer__block__content">
+                                        <div class="begin__text__slogan footer__slogan">
+                                            <p class="framer-text-12">contact us</p>
+                                        </div>
+                                        <div class="footer__nav__text">
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link ">
+                                                        <p class="framer-text-24">
+                                                            +7 700 000-0000
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="" class="footer__link__text">
+                                                    <div class="nav__link__about  footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            г.Алмата Навои 124г
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="hightlight__btn__ footer__logo__link">
+                                                <a href="" class="footer__link__text">
+                                                    <div class="nav__link__about footer__logo__link">
+                                                        <p class="framer-text-24">
+                                                            john.anderson@gmail.com
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="footer__aspect">
+                                    <div class="data__framer__bg__wrapper">
+                                        <img decoding="async" sizes="calc(min(100vw - NaNpx, 1928px) - 56px)" class="img__footer" src="/main/assets/icons/svgforwardLogistic.svg" alt="logo">
+                                    </div>
+                                </div>
+                                <div class="footer__container">
+                                    <div class="footer__grid footer__column" data-border="true"></div>
+                                    <div class="footer__grid footer__column" data-border="true"></div>
+                                    <div class="footer__grid footer__column" data-border="true"></div>
+                                    <div class="footer__grid footer__column" data-border="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="/main/script.js"></script>
 </body>
 </html>
