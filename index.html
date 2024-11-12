@@ -1108,6 +1108,26 @@
         </div>
     </section>
     </div>
+    <script>
+        // Обработчик отправки формы с помощью AJAX
+        $('#myForm').on('submit', function(e) {
+            e.preventDefault(); // Отключаем стандартное поведение отправки формы
+    
+            $.ajax({
+                url: 'send_whatsapp.php', // Укажите путь к PHP-файлу
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    // Показываем сообщение об успехе или ошибке
+                    $('#responseMessage').html(response);
+                },
+                error: function() {
+                    // Сообщение при ошибке в AJAX-запросе
+                    $('#responseMessage').html('<p style="color: red;">Произошла ошибка при отправке данных.</p>');
+                }
+            });
+        });
+    </script>
     <script src="/main/script.js"></script>
 </body>
 </html>
