@@ -31,7 +31,7 @@ jQuery(document).ready(function(){
 });
 
 $(document).ready(function() {
-    $('#Form1').submit(function(e) {
+    $('#form1').submit(function(e) {
         e.preventDefault(); // Предотвращаем стандартное поведение отправки формы
     
         // Получаем данные формы
@@ -45,9 +45,9 @@ $(document).ready(function() {
             success: function(response) {
                 // Обработка успешного ответа от сервера
                 alert('Данные успешно отправлены');
-                document.getElementById('Form1').reset(); // Очищаем форму
+                document.getElementById('form1').reset(); // Очищаем форму
                 document.getElementById('submitBtn1').disabled = true; // Отключаем кнопку отправки формы
-                document.getElementById('Form1').setAttribute('data-submitted', 'true'); // Устанавливаем атрибут, указывающий на отправку формы
+                document.getElementById('form1').setAttribute('data-submitted', 'true'); // Устанавливаем атрибут, указывающий на отправку формы
             },
             error: function(xhr, status, error) {
                 // Обработка ошибок при выполнении запроса
@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
     
     
-    $('#Form2').submit(function(e) {
+    $('#form2').submit(function(e) {
         e.preventDefault(); // Предотвращаем стандартное поведение отправки формы
     
         // Получаем данные формы
@@ -72,9 +72,9 @@ $(document).ready(function() {
             success: function(response) {
                 // Обработка успешного ответа от сервера
                 alert('Данные успешно отправлены');
-                document.getElementById('Form2').reset(); // Очищаем форму
+                document.getElementById('form2').reset(); // Очищаем форму
                 document.getElementById('submitBtn2').disabled = true; // Отключаем кнопку отправки формы
-                document.getElementById('Form2').setAttribute('data-submitted', 'true'); // Устанавливаем атрибут, указывающий на отправку формы
+                document.getElementById('form2').setAttribute('data-submitted', 'true'); // Устанавливаем атрибут, указывающий на отправку формы
             },
             error: function(xhr, status, error) {
                 // Обработка ошибок при выполнении запроса
