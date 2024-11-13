@@ -12,57 +12,36 @@ function toggleMenu() {
 }
 
 $(document).ready(function() {
-    $('#form1').submit(function(e) {
-        e.preventDefault(); // Предотвращаем стандартное поведение отправки формы
-    
-        // Получаем данные формы
-        var formData = $(this).serialize();
-    
-        // Отправляем AJAX-запрос на сервер для первой формы
-        $.ajax({
-            type: 'POST',
-            url: '/send_whatsapp.php',
-            data: formData,
-            success: function(response) {
-                // Обработка успешного ответа от сервера
-                alert('Данные успешно отправлены');
-                document.getElementById('form1').reset(); // Очищаем форму
-                document.getElementById('submitBtn1').disabled = true; // Отключаем кнопку отправки формы
-                document.getElementById('form1').setAttribute('data-submitted', 'true'); // Устанавливаем атрибут, указывающий на отправку формы
-            },
-            error: function(xhr, status, error) {
-                // Обработка ошибок при выполнении запроса
-                console.error(error);
-                alert('Произошла ошибка. Попробуйте еще раз позже');
-            }
+    // Общая функция для отправки формы
+    function handleFormSubmit(formId, submitBtnId) {
+        $(formId).submit(function(e) {
+            e.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+
+            // Получаем данные формы
+            var formData = $(this).serialize();
+
+            // Отправляем AJAX-запрос на сервер
+            $.ajax({
+                type: 'POST',
+                url: '/send_whatsapp.php',
+                data: formData,
+                success: function(response) {
+                    // Обработка успешного ответа от сервера
+                    alert('Данные успешно отправлены');
+                    $(formId)[0].reset(); // Очищаем форму
+                    $(submitBtnId).prop('disabled', true); // Отключаем кнопку отправки формы
+                    $(formId).attr('data-submitted', 'true'); // Устанавливаем атрибут, указывающий на отправку формы
+                },
+                error: function(xhr, status, error) {
+                    // Обработка ошибок при выполнении запроса
+                    console.error(error);
+                    alert('Произошла ошибка. Попробуйте еще раз позже');
+                }
+            });
         });
-    });
-    
-    
-    $('#form2').submit(function(e) {
-        e.preventDefault(); // Предотвращаем стандартное поведение отправки формы
-    
-        // Получаем данные формы
-        var formData = $(this).serialize();
-    
-        // Отправляем AJAX-запрос на сервер для третьей формы
-        $.ajax({
-            type: 'POST',
-            url: '/send_whatsapp.php',
-            data: formData,
-            success: function(response) {
-                // Обработка успешного ответа от сервера
-                alert('Данные успешно отправлены');
-                document.getElementById('form2').reset(); // Очищаем форму
-                document.getElementById('submitBtn2').disabled = true; // Отключаем кнопку отправки формы
-                document.getElementById('form2').setAttribute('data-submitted', 'true'); // Устанавливаем атрибут, указывающий на отправку формы
-            },
-            error: function(xhr, status, error) {
-                // Обработка ошибок при выполнении запроса
-                console.error(error);
-                alert('Произошла ошибка. Попробуйте еще раз позже');
-            }
-        });
-    });
-    
+    }
+
+    // Применяем общую функцию для обеих форм
+    handleFormSubmit('#form1', '#submitBtn1');
+    handleFormSubmit('#form2', '#submitBtn2');
 });
