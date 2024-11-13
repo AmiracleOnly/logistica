@@ -6,6 +6,7 @@
     <title>Forward Logistic Group</title>
     <link rel="stylesheet" href="/main/assets/static/test.css">
     <link rel="stylesheet" href="/main/assets/static/media.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <link rel="stylesheet" href="/s.css"> -->
 </head>
 <body class="body">
@@ -759,7 +760,7 @@
         <div class="main__container__about__us" >
             <div class="main__block__about" >
                     <div class="about_us__right">
-                        <form action="send_whatsapp.php" method="post" class="form" >
+                        <form action="send_whatsapp.php" method="post" class="form" id="form">
                             <div class="form__subtitle form__text__calculate">
                                 <h2 class="form__action__subtitle"  id="calculate">РАССЧИТАТЬ СТОИМОСТЬ<br> ДОСТАВКИ ГРУЗА</h2>
                                 
@@ -863,7 +864,7 @@
                                 <div class="button__submit__form">
                                     <button type="submit" class="btn__form framer-btn">
                                         <div class="btn__form__submit">
-                                            <p class="btn__text framer-text">Отправить</p>
+                                            <p class="btn__text framer-text" type="submit">Отправить</p>
                                         </div>
                                     </button>
                                 </div>
@@ -875,6 +876,8 @@
             </div>
         </div>
     </section>
+
+    <div id="responseMessage"></div>
 
     <section id="geo" class="section__container geo_section">
         <div class="geo__map map" id="map" style="width: 100%; height: 590px;">
@@ -1110,7 +1113,7 @@
     </div>
     <script>
         // Обработчик отправки формы с помощью AJAX
-        $('#myForm').on('submit', function(e) {
+        $('#Form').on('submit', function(e) {
             e.preventDefault(); // Отключаем стандартное поведение отправки формы
     
             $.ajax({
