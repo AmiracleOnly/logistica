@@ -1417,6 +1417,7 @@ body {
 .text-color-07{
     white-space: normal;
     color: var( --color-grid--text);
+    text-transform: lowercase;
 }
 
 .text-content{
@@ -1627,7 +1628,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 8px;
+    gap: 47px;
     height: min-content;
     justify-content: flex-start;
     overflow: visible;
@@ -1726,7 +1727,7 @@ body {
     overflow: hidden;
     padding: 0;
     position: relative;
-    /* width: 475px; */
+    width: 475px;
     will-change: var(--framer-will-change-override, transform);
 }
 

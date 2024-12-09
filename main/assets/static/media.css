@@ -255,6 +255,10 @@
     .media__footer4 {
         display: none;
     }
+
+    .faq__mobile{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 767px) {
