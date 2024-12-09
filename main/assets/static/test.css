@@ -1170,7 +1170,7 @@ body {
 }
 
 .we__block__content{
-    grid-template-columns: repeat(3, minmax(1px, 1fr));
+    grid-template-columns: repeat(1, minmax(1px, 1fr));
     grid-template-rows: repeat(1, min-content);
     overflow: hidden;
     z-index: 2;
