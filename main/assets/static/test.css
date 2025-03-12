@@ -313,7 +313,7 @@ body {
     flex: none;
     gap: 8px;
     grid-auto-rows: min-content;
-    grid-template-columns: repeat(4, minmax(1px, 1fr));
+    grid-template-columns: repeat(5, minmax(1px, 1fr));
     grid-template-rows: repeat(1, min-content);
     height: min-content;
     justify-content: center;
@@ -1965,6 +1965,10 @@ width: 100%;
     width: 100%;
     z-index: 2;
 }
+.main__nav__content.footer__nav{
+    grid-template-columns: repeat(4, minmax(1px, 1fr));
+
+}
 
 .footer__aspect{
     opacity: 1;
@@ -2877,7 +2881,7 @@ width: 100%;
 }
 
 .services__main__text{
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .service__content__white__text{
